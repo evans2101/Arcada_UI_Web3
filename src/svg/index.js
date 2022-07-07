@@ -1,0 +1,5 @@
+export { ReactComponent as AddIcon } from './add.icon.svg'
+export { ReactComponent as AddToPlaylistIcon } from './playlist.icon.svg'
+export { ReactComponent as MoreVerticalIcon } from './more.vertical.icon.svg'
+export { ReactComponent as CameraIcon } from './camera.icon.svg'
+export { ReactComponent as EditIcon } from './pen.icon.svg'
