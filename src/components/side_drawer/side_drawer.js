@@ -15,7 +15,7 @@ import SidebarProfileName from "../sidebar_profile_name/sidebar_profile_name";
 import { Avatar, Typography } from "@mui/material";
 import SideProfile from "./side_profile";
 
-const drawerWidth = 240;
+const drawerWidth = 280;
 
 const DrawerHeader = styled("div")(({ theme }) => ({
   display: "flex",

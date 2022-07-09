@@ -53,6 +53,44 @@ export const staticIcons = {
   repeatIcon: '/assets/icons/repeat_icon.png',
 }
 
+export const featuredSamples = [
+  {
+    id: 0,
+    bannerImg: '/assets/featured/Motivational-Gym-Captions-for-Instagram 1.png',
+    name: 'Gym',
+    totalVideo: 2,
+    linkUrl: '/my-playlist'
+  },
+  {
+    id: 1,
+    bannerImg: '/assets/featured/Motivational-Gym-Captions-for-Instagram 1.png',
+    name: 'Gym',
+    totalVideo: 2,
+    linkUrl: '/my-playlist'
+  },
+  {
+    id: 2,
+    bannerImg: '/assets/featured/Motivational-Gym-Captions-for-Instagram 1.png',
+    name: 'Gym',
+    totalVideo: 2,
+    linkUrl: '/my-playlist'
+  },
+  {
+    id: 3,
+    bannerImg: '/assets/featured/Motivational-Gym-Captions-for-Instagram 1.png',
+    name: 'Gym',
+    totalVideo: 2,
+    linkUrl: '/my-playlist'
+  },
+  {
+    id: 4,
+    bannerImg: '/assets/featured/Motivational-Gym-Captions-for-Instagram 1.png',
+    name: 'Gym',
+    totalVideo: 2,
+    linkUrl: '/my-playlist'
+  }
+]
+
 export const SongSamples = [
   {
     id: 0,

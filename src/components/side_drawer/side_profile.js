@@ -39,7 +39,10 @@ const SideProfile = ({ isLogin, data }) => {
         <Box sx={{ padding: '4% 6%', display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
             <img src={image} alt='user profile' style={{ width: '37%', height: '100%' }} />
             <Box sx={{ ml: 2 }}>
-            <Typography variant='h6' component='div' sx={{ color: 'white' }}>{name}</Typography>
+            <Typography variant='h6' component='div' sx={{ color: 'white', display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                {name}
+                <img src={`${process.env.PUBLIC_URL}/assets/icons/premium-quality.png`} alt='premium' style={{ width: '23px', height: '100%', paddingLeft: '5px' }} />
+            </Typography>
             <a href='/profile' style={{ color: '#D080F3' }}>View Profile</a>
             </Box>
         </Box>}
