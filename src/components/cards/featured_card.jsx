@@ -1,8 +1,8 @@
 import * as React from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import { FeturedCardStyled } from "./featured_card_styled";
-import { AddIcon, AddToPlaylistIcon } from "../../svg";
+// import { AddIcon, AddToPlaylistIcon } from "../../svg";
 import { usePlayer } from "../../context/playerContext";
 import { ModalElement } from "../modal/modal";
 import { CustomButton } from "../button/button";
@@ -13,7 +13,6 @@ import { Box, Typography } from "@mui/material";
 const FeaturedCard = (props) => {
   const {
     name,
-    artistName,
     bannerImg,
     totalVideo,
     artistImg,
@@ -34,7 +33,6 @@ const FeaturedCard = (props) => {
         isOpen={details}
         onClose={() => setDetails(false)}
         name={name}
-        artistName={artistName}
         coverImg={bannerImg}
         artistImg={artistImg}
         artistProfileUrl={artistProfileUrl}
