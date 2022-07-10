@@ -8,6 +8,11 @@ import { CustomButton as Button } from '../../components/button/button'
 import { favoritesInfo, staticIcons } from '../../data/data'
 import { previewDynamicImage } from '../../tools'
 import { MoreVerticalIcon } from '../../svg'
+import SearchField, {
+} from '../../components/search_field/search_field'
+import {
+  SelectStyle
+} from '../playlist/playlist-style'
 
 const Favorites = () => {
   const theme = useTheme()
@@ -28,17 +33,38 @@ const Favorites = () => {
             alt="profile_img"
           />
         </div>
-        <span>
-          <h1>Favorites</h1>
           <span>
-            <h3>{favoritesInfo?.profileName} • </h3>
-            <p>{favoritesInfo?.list?.length} songs,</p>
-            <p>
-              {favoritesInfo?.allSongsDuration?.min} min{' '}
-              {favoritesInfo?.allSongsDuration?.sec} sec
-            </p>
+            <h1>Favorites</h1>
+            <span>
+              <h3>{favoritesInfo?.profileName} • </h3>
+              <p>{favoritesInfo?.list?.length} songs,</p>
+              <p>
+                {favoritesInfo?.allSongsDuration?.min} min{' '}
+                {favoritesInfo?.allSongsDuration?.sec} sec
+              </p>
+            </span>
           </span>
-        </span>
+          <span
+          style={{display: 'flex', justifyContent: 'space-around', flexDirection: 'row'}}
+          >
+            <SearchField
+              placeholder="Search in Playlist"
+              width={400}
+              rightIcon={null}
+              radius={8}
+              border="0px"
+            />
+            <SelectStyle
+            style={{marginLeft: '80px'}}
+            >
+              <select>
+                <option value="0">Alphabetical</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">4</option>
+              </select>
+            </SelectStyle>
+          </span>
       </div>
 
       <FavoriteTable>
