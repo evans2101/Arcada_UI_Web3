@@ -211,9 +211,9 @@ const VideoPlayer = ({ videoInfo }) => {
               />
             </span>
           </span>
-          <span className={`view_counter${!isPlaying ? '' : ' hide_image'}`}>
+          {/* <span className={`view_counter${!isPlaying ? '' : ' hide_image'}`}>
             <p>{videoInfo?.viewCount} Views</p>
-          </span>
+          </span> */}
           <span
             onClick={() => isFullScreenMode(!isFullScreen)}
             className={`view_fullscreen${!isPlaying ? '' : ' hide_image'}`}

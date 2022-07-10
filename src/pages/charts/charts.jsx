@@ -30,9 +30,14 @@ const Charts = () => {
             onClick={() => setTableType('collectors')}
           />
           <Button
-            buttonText="Videos"
-            type={tableType === 'videos' ? 'primary' : 'gray'}
-            onClick={() => setTableType('videos')}
+            buttonText="Collections"
+            type={tableType === 'Collections' ? 'primary' : 'gray'}
+            onClick={() => setTableType('Collections')}
+          />
+          <Button
+            buttonText="Playlists"
+            type={tableType === 'Playlists' ? 'primary' : 'gray'}
+            onClick={() => setTableType('Playlists')}
           />
         </span>
 
@@ -46,19 +51,18 @@ const Charts = () => {
         <ChartTable>
           <div className="chart_table__header">
             <p>#</p>
-            <p>Rank</p>
+            <p>Artists</p>
             <p>Total Streams</p>
             <p>Unique Collectors</p>
-            <p>Edition Sold</p>
+            <p>Editions Sold</p>
             <p>Primary Sales</p>
             <p>Secondary Sales</p>
             <p>Total Sales</p>
           </div>
 
           {artistChartsData?.map((_, idx) => (
-            <div key={idx} className="chart_table__rows">
+            <div key={idx} className="chart_table__rows">   
               <p>{_?.id}</p>
-
               <span className="row_info">
                 <img
                   src={previewDynamicImage(_?.profileImg)}
@@ -99,9 +103,9 @@ const Charts = () => {
         <ChartTable>
           <div className="chart_table__header">
             <p>#</p>
-            <p>Rank</p>
+            <p>Collectors</p>
             <p>Editions Collected</p>
-            <p>Artist Supported</p>
+            <p>Artists Supported</p>
             <p>Total Spent</p>
           </div>
 
@@ -132,15 +136,55 @@ const Charts = () => {
           ))}
         </ChartTable>
       )}
-
-      {tableType === 'videos' && (
+      {tableType === 'Playlists' && (
         <ChartTable>
           <div className="chart_table__header">
             <p>#</p>
-            <p>Rank</p>
+            <p>Playlists</p>
+            <p>Total Streams</p>
+            <p>Unique Listeners</p>
+            <p>Editions Sold</p>
+            <p>Total Sales</p>
+          </div>
+
+          {collectorsChartsData?.map((_, idx) => (
+            <div key={idx} className="chart_table__rows">
+              <p>{_?.id}</p>
+
+              <span className="row_info">
+                <img
+                  src={previewDynamicImage(_?.collectorProfileImg)}
+                  alt="profile_img"
+                />
+                <span>
+                  <p>{_?.collectorName}</p>
+                  <p>{_?.collectorId}</p>
+                  
+                </span>
+              </span>
+              <p>{_?.editionsCollected}</p>
+              <p>{_?.artistSupported}</p>
+              <p>{_?.editionSold}</p>
+
+              <span className="double__deck">
+                <p>
+                  {_?.totalSpent?.crypto} {_?.totalSpent?.unit}{' '}
+                </p>
+                <p>${_?.totalSpent?.dollar} </p>
+              </span>
+            </div>
+          ))}
+        </ChartTable>
+      )}
+
+      {tableType === 'Collections' && (
+        <ChartTable>
+          <div className="chart_table__header">
+            <p>#</p>
+            <p>Collections</p>
             <p>Total Streams</p>
             <p>Unique Collectors</p>
-            <p>Edition Sold</p>
+            <p>Editions Sold</p>
             <p>Primary Sales</p>
             <p>Secondary Sales</p>
             <p>Total Sales</p>

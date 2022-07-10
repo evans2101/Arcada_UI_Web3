@@ -47,8 +47,8 @@ const Favorites = () => {
           <p></p>
           <p>Title</p>
           <p>Album</p>
-          <p>Added</p>
-          <p>Duration</p>
+          <p style={{paddingLeft: '50px'}}>Added</p>
+          <p style={{marginLeft: '95px'}}>Duration</p>
           <p></p>
           <p></p>
           <p></p>
@@ -81,14 +81,15 @@ const Favorites = () => {
               </span>
             </span>
             <p>{_?.album}</p>
-            <p>{_?.addedTimestamp}</p>
-            <p>{_?.duration}</p>
+            <p style={{marginLeft: '15px'}}>{_?.addedTimestamp}</p>
             <span className="row__favorite_box">
               <img
                 src={previewDynamicImage(staticIcons?.heartFull)}
                 alt="profile_img"
+                style={{marginLeft: '25px'}}
               />
             </span>
+            <p>{_?.duration}</p>
             <span className="row__action_box">
               <Button
                 buttonText="Buy Edition"

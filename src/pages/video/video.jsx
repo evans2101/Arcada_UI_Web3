@@ -105,7 +105,7 @@ const VideoPage = () => {
             <p>USD ${videoInfo?.editionPrice}</p>
           </span>
           <span>
-            <p>Edition Sold</p>
+            <p>Editions Sold</p>
 
             {isStarted ? (
               <>
@@ -115,7 +115,7 @@ const VideoPage = () => {
               <h2>3</h2>
             )}
 
-            <p>Limited Editions</p>
+            {/* <p>Limited Editions</p> */}
           </span>
         </div>
 

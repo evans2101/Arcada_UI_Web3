@@ -62,10 +62,16 @@ export const Setting = () => {
                 value={settingContent?.account?.userName}
               />
               <Input
+                label="E-mail"
+                width={'60%'}
+                placeholder='Your E-mail'
+              />
+              <Input
                 value={address}
                 disabled={true}
                 label="Wallet"
-                width={'60%'}
+                width={'100%'}
+                placeholder=' Ox...................................................................0'
               />
               <InputArea
                 label="Bio"
@@ -74,11 +80,12 @@ export const Setting = () => {
                 onChange={(e) => setBio(e.target.value)}
                 maxCount={1000}
                 currentCount={bio?.length}
+                placeholder='Share a brief bio to displayed to other users on your user home screen.'
               />
             </span>
+          <NormalButton title="Save Changes" />
           </div>
 
-          <NormalButton title="Save Changes" />
         </div>
       ) : (
         <div className="social__content">
@@ -87,35 +94,41 @@ export const Setting = () => {
               label="Instagram link"
               icon={previewStaticImage(staticIcons?.instagram)}
               width={'50%'}
+              placeholder='www.instagram.com/jhondoe123'
             />
             <IconInput
               label="Twitter link"
               icon={previewStaticImage(staticIcons?.twitter)}
               width={'50%'}
+              placeholder='www.twitter.com/jhondoe123'
             />
             <IconInput
               label="Linkedin link"
               icon={previewStaticImage(staticIcons?.linkedin)}
               width={'50%'}
+              placeholder='www.linkedin.com/jhondoe123'
             />
             <IconInput
               label="Opensea link"
               icon={previewStaticImage(staticIcons?.opensea)}
               width={'50%'}
+              placeholder='www.opensea.com/jhondoe123'
             />
             <IconInput
               label="TikTok link"
               icon={previewStaticImage(staticIcons?.tiktok)}
               width={'50%'}
+              placeholder='www.tiktok.com/jhondoe123'
             />
             <IconInput
               label="Facebool link"
               icon={previewStaticImage(staticIcons?.facebook)}
               width={'50%'}
+              placeholder='www.facebook.com/jhondoe123'
             />
           </span>
-
           <NormalButton title="Save Changes" />
+
         </div>
       )}
     </SeetingBoxLayout>
