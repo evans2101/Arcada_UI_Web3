@@ -5,10 +5,11 @@ import { Box, useTheme } from "@mui/material";
 import PropTypes from "prop-types";
 
 import SongCard from "../../components/cards/song_card";
-import { SongSamples } from "../../data/data";
+import { SongSamples, featuredSamples } from "../../data/data";
 
 import "swiper/css";
 import "swiper/css/navigation";
+import FeaturedCard from "../../components/cards/featured_card";
 
 function handlePrev(node) {
   document.querySelectorAll(".swiper-button-prev")[node].click();
@@ -24,13 +25,13 @@ const Home = () => {
       sx={{ borderRadius: "10px", padding: "40px 30px", overflow: "hidden" }}
     >
       <Section node={0} title="Trending Videos" />
-      <Section node={1} isMarginTop title="Popular Genres" />
+      <Section node={1} isMarginTop title="Featured Playlists" featured={true} />
       <Section node={2} isMarginTop title="Recently Played Videos" />
     </Box>
   );
 };
 
-export const Section = ({ isMarginTop, title, node }) => {
+export const Section = ({ isMarginTop, title, node, featured }) => {
   return (
     <Box
       sx={{
@@ -135,13 +136,19 @@ export const Section = ({ isMarginTop, title, node }) => {
         modules={[Navigation]}
         className="mySwiper"
       >
-        {SongSamples.map((item) => {
-          return (
+        {featured ? 
+          (featuredSamples.map((item) => (
+            <SwiperSlide key={item.id}>
+              <FeaturedCard {...item} />
+            </SwiperSlide>
+          )))
+          :
+          (SongSamples.map((item) => (
             <SwiperSlide key={item.id}>
               <SongCard {...item} />
             </SwiperSlide>
-          );
-        })}
+          )))
+        }
       </Swiper>
     </Box>
   );

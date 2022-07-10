@@ -41,12 +41,12 @@ const TopBar = ({ open, handleDrawerOpen }) => {
                 color="inherit"
                 aria-label="open drawer"
                 onClick={() => handleDrawerOpen()}
-                sx={{ mr: 1 }}
+                sx={{ mr: 5 }}
               >
                 {open ? (
-                  <ChevronLeftIcon />
+                  <ChevronLeftIcon sx={{ bgcolor: '#3C3C3C', borderRadius: '50px', marginLeft: '-20px' }} />
                 ) : (
-                  <ChevronRightIcon onClick={handleDrawerOpen} />
+                  <ChevronRightIcon sx={{ bgcolor: '#3C3C3C', borderRadius: '50px' }} onClick={handleDrawerOpen} />
                 )}
               </IconButton>
               <SearchField />
