@@ -14,7 +14,7 @@ import {
   SelectStyle
 } from '../playlist/playlist-style'
 
-const Favorites = () => {
+const Favorites = () => { 
   const theme = useTheme()
   const navigate = useNavigate()
   const { setSong } = usePlayer()
