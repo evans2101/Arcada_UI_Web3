@@ -9,11 +9,10 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import Divider from "@mui/material/Divider";
 import PropTypes from "prop-types";
-
 import { sidebarLinks } from "./side_drawer_links";
 import SidebarProfileName from "../sidebar_profile_name/sidebar_profile_name";
 
-const drawerWidth = 240;
+const drawerWidth = 280;
 
 const DrawerHeader = styled("div")(({ theme }) => ({
   display: "flex",
