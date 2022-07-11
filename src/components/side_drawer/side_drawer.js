@@ -9,10 +9,8 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import Divider from "@mui/material/Divider";
 import PropTypes from "prop-types";
-
 import { sidebarLinks } from "./side_drawer_links";
 import SidebarProfileName from "../sidebar_profile_name/sidebar_profile_name";
-import { Avatar, Typography } from "@mui/material";
 import SideProfile from "./side_profile";
 
 const drawerWidth = 280;
@@ -70,13 +68,13 @@ const SideDrawer = ({ open }) => {
         <Divider sx={{ borderColor: "#363638" }} />
         <SidebarProfileName />
         <List sx={{ height: "100%", backgroud: theme.palette.secondary.light }}>
-          <ListItem 
+          {/* <ListItem 
             sx={{
               mb: 2
             }}
           >
             <SideProfile isLogin={true} data={dataDummy} />
-          </ListItem>
+          </ListItem> */}
           {sidebarLinks.map((link, index) => {
             const isHome = pathname === "/home" && link.path === "/";
             const pathnameWithoutSlash = pathname.split("/")[1];

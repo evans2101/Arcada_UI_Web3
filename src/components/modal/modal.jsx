@@ -109,7 +109,6 @@ export function ModalElement({
       }}
     >
       <ModalBody>
-        <h2>test modal</h2>
         <span className="modal__content">
           <div>
             <img src={coverImg} alt="cover" />
@@ -124,12 +123,13 @@ export function ModalElement({
           </span>
         </span>
         {/* <Link to={`/artist-profile/${artistProfileUrl}`}>Add to Exiting Playlist</Link> */}
-        <a href="#">Add to Exiting Playlist</a>
 
         <span className="modal__action">
-          <CustomButton buttonText="Add to New Playlist" type="primary" />
-          <CustomButton buttonText="Cancel" type="default" onClick={onClose} />
+          <CustomButton buttonText="Create Playlist" type="primary" />
+          <CustomButton buttonText="Add to Playlist" type="default" />
+          {/* <CustomButton buttonText="Cancel" type="default" onClick={onClose} /> */}
         </span>
+        <Link to={`/artist-profile/${artistProfileUrl}`}>Cancel</Link>
       </ModalBody>
     </Modal>
   );
