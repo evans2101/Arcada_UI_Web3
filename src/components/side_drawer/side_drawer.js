@@ -11,6 +11,8 @@ import Divider from "@mui/material/Divider";
 import PropTypes from "prop-types";
 import { sidebarLinks } from "./side_drawer_links";
 import SidebarProfileName from "../sidebar_profile_name/sidebar_profile_name";
+import { Avatar, Typography } from "@mui/material";
+import SideProfile from "./side_profile";
 
 const drawerWidth = 280;
 
@@ -30,6 +32,11 @@ const SideDrawer = ({ open }) => {
   const navigate = useNavigate();
   const pathname = location.pathname;
   console.log(pathname);
+
+  const dataDummy = {
+    name: 'John Doe',
+    image: `${process.env.PUBLIC_URL}/assets/icons/carbon-user.png`
+  }
   return (
     <Box
       sx={{
@@ -62,6 +69,13 @@ const SideDrawer = ({ open }) => {
         <Divider sx={{ borderColor: "#363638" }} />
         <SidebarProfileName />
         <List sx={{ height: "100%", backgroud: theme.palette.secondary.light }}>
+          <ListItem 
+            sx={{
+              mb: 2
+            }}
+          >
+            <SideProfile isLogin={true} data={dataDummy} />
+          </ListItem>
           {sidebarLinks.map((link, index) => {
             const isHome = pathname === "/home" && link.path === "/";
             const pathnameWithoutSlash = pathname.split("/")[1];
