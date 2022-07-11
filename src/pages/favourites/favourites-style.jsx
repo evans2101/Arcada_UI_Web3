@@ -15,12 +15,12 @@ export const BoxLayout = styled('div')(({ theme }) => ({
     backgroundColor: theme.palette.colors.black,
     width: '100%',
     display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
     justifyContent: 'flex-start',
     borderRadius: 10,
     padding: 20,
-    '& > div': {
+    '& > div > div': {
       borderRadius: 10,
       marginRight: 20,
       height: 80,

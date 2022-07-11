@@ -2,7 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { usePlayer } from '../../context/playerContext'
 
-import { useTheme } from '@mui/material'
+import { Box, useTheme } from '@mui/material'
 import { BoxLayout, FavoriteTable } from './favourites-style'
 import { CustomButton as Button } from '../../components/button/button'
 import { favoritesInfo, staticIcons } from '../../data/data'
@@ -14,25 +14,32 @@ import {
   SelectStyle
 } from '../playlist/playlist-style'
 
-const Favorites = () => { 
+const Favorites = () => {
   const theme = useTheme()
   const navigate = useNavigate()
   const { setSong } = usePlayer()
 
   return (
     <BoxLayout theme={theme}>
-      <div className="box__title">
-        <div>
-          <img
-            src={previewDynamicImage(favoritesInfo?.list[0]?.songImg)}
-            alt="profile_img"
-          />
+      <Box className='box__title'>
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'row',
+            mb: 3
+          }}
+        >
+          <Box>
+            <img
+              src={previewDynamicImage(favoritesInfo?.list[0]?.songImg)}
+              alt="profile_img"
+            />
 
-          <img
-            src={previewDynamicImage(favoritesInfo?.list[1]?.songImg)}
-            alt="profile_img"
-          />
-        </div>
+            <img
+              src={previewDynamicImage(favoritesInfo?.list[1]?.songImg)}
+              alt="profile_img"
+            />
+          </Box>
           <span>
             <h1>Favorites</h1>
             <span>
@@ -44,28 +51,29 @@ const Favorites = () => {
               </p>
             </span>
           </span>
-          <span
-          style={{display: 'flex', justifyContent: 'space-around', flexDirection: 'row'}}
+        </Box>
+        <span
+          style={{ display: 'flex', justifyContent: 'space-around', flexDirection: 'row' }}
+        >
+          <SearchField
+            placeholder="Search in Playlist"
+            width={400}
+            rightIcon={null}
+            radius={8}
+            border="0px"
+          />
+          <SelectStyle
+            style={{ marginLeft: '80px' }}
           >
-            <SearchField
-              placeholder="Search in Playlist"
-              width={400}
-              rightIcon={null}
-              radius={8}
-              border="0px"
-            />
-            <SelectStyle
-            style={{marginLeft: '80px'}}
-            >
-              <select>
-                <option value="0">Alphabetical</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">4</option>
-              </select>
-            </SelectStyle>
-          </span>
-      </div>
+            <select>
+              <option value="0">Alphabetical</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">4</option>
+            </select>
+          </SelectStyle>
+        </span>
+      </Box>
 
       <FavoriteTable>
         <div className="favorite_table__header">
@@ -73,8 +81,8 @@ const Favorites = () => {
           <p></p>
           <p>Title</p>
           <p>Album</p>
-          <p style={{paddingLeft: '50px'}}>Added</p>
-          <p style={{marginLeft: '95px'}}>Duration</p>
+          <p style={{ paddingLeft: '50px' }}>Added</p>
+          <p style={{ marginLeft: '95px' }}>Duration</p>
           <p></p>
           <p></p>
           <p></p>
@@ -107,12 +115,12 @@ const Favorites = () => {
               </span>
             </span>
             <p>{_?.album}</p>
-            <p style={{marginLeft: '15px'}}>{_?.addedTimestamp}</p>
+            <p style={{ marginLeft: '15px' }}>{_?.addedTimestamp}</p>
             <span className="row__favorite_box">
               <img
                 src={previewDynamicImage(staticIcons?.heartFull)}
                 alt="profile_img"
-                style={{marginLeft: '25px'}}
+                style={{ marginLeft: '25px' }}
               />
             </span>
             <p>{_?.duration}</p>
@@ -120,12 +128,12 @@ const Favorites = () => {
               <Button
                 buttonText="Buy Edition"
                 type={'primary'}
-                onClick={() => {}}
+                onClick={() => { }}
               />
               <Button
                 buttonText="View on OpenSea"
                 type={'default'}
-                onClick={() => {}}
+                onClick={() => { }}
               />
             </span>
             <span className="row__single_action">
