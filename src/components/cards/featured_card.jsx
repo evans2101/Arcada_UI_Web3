@@ -1,15 +1,8 @@
 import * as React from "react";
-<<<<<<< HEAD
-import { useNavigate, Link } from "react-router-dom";
-import PropTypes from "prop-types";
-import { FeturedCardStyled } from "./featured_card_styled";
-import { AddIcon, AddToPlaylistIcon } from "../../svg";
-=======
 import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import { FeturedCardStyled } from "./featured_card_styled";
 // import { AddIcon, AddToPlaylistIcon } from "../../svg";
->>>>>>> 3377007e4399769ce993fa3b4f69a35a50437115
 import { usePlayer } from "../../context/playerContext";
 import { ModalElement } from "../modal/modal";
 import { CustomButton } from "../button/button";
@@ -20,10 +13,6 @@ import { Box, Typography } from "@mui/material";
 const FeaturedCard = (props) => {
   const {
     name,
-<<<<<<< HEAD
-    artistName,
-=======
->>>>>>> 3377007e4399769ce993fa3b4f69a35a50437115
     bannerImg,
     totalVideo,
     artistImg,

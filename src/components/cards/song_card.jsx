@@ -70,7 +70,7 @@ const SongCard = (props) => {
           <div className="card__profile-right">
             <img
               className="card__profile-heart"
-              src={previewStaticImage(staticIcons?.heartFull)}
+              src={previewStaticImage(staticIcons?.heartOutline)}
               alt="heart"
             />
             <span>65</span>

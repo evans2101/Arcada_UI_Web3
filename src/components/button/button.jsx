@@ -99,7 +99,7 @@ const CustomButtonStyled = styled(Button)(
     }),
     ...(type === 'default' && {
       color: theme.palette.primary.main,
-      background: '#fff',
+      background: '#ffffff',
     }),
     ...(type === 'dark' && {
       color: '#fff',
