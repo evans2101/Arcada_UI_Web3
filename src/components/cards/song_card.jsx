@@ -49,7 +49,7 @@ const SongCard = (props) => {
           {addToPlayListIcon ? (
             <AddToPlaylistIcon style={{ width: 42, height: 42 }} />
           ) : (
-            <AddIcon onClick={() => setDetails(true)} />
+            <AddToPlaylistIcon onClick={() => setDetails(true)} style={{ width: 42, height: 42 }} />
           )}
         </div>
         <div className="card__profile">
